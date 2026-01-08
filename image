@@ -1,0 +1,79 @@
+<html>
+<html lang="so">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ururka Cagaarka - Jaamacadda Nugaal</title>
+  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: 20px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+    }
+
+    p {
+      text-align: center;
+      font-size: 16px;
+      color: #34495e;
+    }
+
+    h2 {
+      text-align: center;
+      margin-top: 30px;
+      color: #27ae60;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Ku Soo Dhawaada Ururka Cagaarka</h1>
+    <p>Ururka Cagaarka ee Jaamacadda Nugaal wuxuu ururiyaa ardayda Faculty-ga Beeraha si ay u wadaagaan aqoon, hawlo iyo sawirro.</p>
+    
+    <h2>Sawirrada Ururka</h2>
+    <div class="gallery">
+      <img src="89.jpg" alt="Sawir 1">
+      <img src="images/AEOA7890.jpg" alt="Sawir 2">
+      <img src="images/moo.png" alt="Sawir 3">
+    </div>
+  </div>
+
+</body>
+</html>
