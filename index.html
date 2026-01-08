@@ -1,0 +1,165 @@
+<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ururka Cagaarka – Jaamacadda Nugaal</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #2e7d32;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .container {
+      max-width: 900px;
+      margin: 20px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #2e7d32;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+    table th, table td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+    table th {
+      background: #e8f5e9;
+    }
+    .search {
+      margin-bottom: 15px;
+    }
+    .search input {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #2e7d32;
+      color: white;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Ururka Cagaarka</h1>
+  <p>Nugaal University – Faculty of Agriculture</p>
+</header>
+
+<div class="container">
+  <h2>Xogta Ardayda</h2>
+  <p>Website-kan waxa lagu soo bandhigayaa xogta ardayda ka tirsan Ururka Cagaarinta ee Jaamacadda Nugaal.</p>
+
+  <div class="search">
+    <input type="text" id="searchInput" placeholder="Raadi Magac ama ID..." onkeyup="searchTable()" />
+  </div>
+
+  <table id="StudentsTable">
+    <thead>
+      <tr>
+        <th>student name.</th>
+        <th>ID</th>
+        <th>Faculty</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Mohamed abdirisaaq farah.</td>
+        <td>4280</td>
+        <td>Agriculture</td>
+      </tr>
+      <tr>
+        <td>Abdimalik hassan duale</td>
+        <td>4538</td>
+        <td>Agriculture</td>
+      </tr>
+      <tr>
+        <td>Abdisalan ahmed mohamud</td>
+        <td>AG002</td>
+        <td>Agriculture</td>
+      </tr>
+      <tr>
+        <td>khaalid ahmed abdirahman.</td>
+        <td>AG002</td>
+        <td>Agriculture</td>
+      </tr>
+      <tr>
+        <td>Abdirisaq abdul ahmed.</td>
+        <td>AG002</td>
+        <td>Agriculture</td>
+      </tr>
+      <tr>
+        <td>Aisha mohamed hassan.</td>
+        <td>AG002</td>
+        <td>Agriculture</td>
+      </tr>
+      <tr>
+        <td>Fatuoh abdirisak kheyre.</td>
+        <td>AG002</td>
+        <td>Agriculture</td>
+      </tr>
+      <tr>
+        <td>Nashad sied h.mohamuth.</td>
+        <td>AG002</td>
+        <td>Agriculture</td>
+      </tr>
+    </tbody>
+  </table>
+<h2>Sawirrada Ururka</h2>
+
+<div class="gallery">
+  <img src="89.jpg" alt="Logo Ururka">
+  <img src="images/activity1.jpg" alt="Hawl Urur">
+  <img src="images/activity2.jpg" alt="Kulanka Ardayda">
+</div>
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+</div>
+
+<footer>
+  <p>© 2026 Ururka Cagaarka – Jaamacadda Nugaal</p>
+</footer>
+
+<script>
+  function searchTable() {
+    let input = document.getElementById('searchInput');
+    let filter = input.value.toUpperCase();
+    let table = document.getElementById('studentsTable');
+    let tr = table.getElementsByTagName('tr');
+
+    for (let i = 1; i < tr.length; i++) {
+      let tdName = tr[i].getElementsByTagName('td')[0];
+      let tdID = tr[i].getElementsByTagName('td')[1];
+      if (tdName || tdID) {
+        let textValue = (tdName.textContent + tdID.textContent).toUpperCase();
+        tr[i].style.display = textValue.indexOf(filter) > -1 ? '' : 'none';
+      }
+    }
+  }
+</script>
+
+</body>
+</html>
